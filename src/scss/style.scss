@@ -32,7 +32,6 @@ body {
 }
 
 
-
 .card {
     width: 330px;
     background-color: #fff;
@@ -94,7 +93,6 @@ body {
     }
 }
 
-
 .subscription-card {
     background-color: var(--very-pale-blue);
     border-radius: 10px;
@@ -128,7 +126,8 @@ body {
         }
     }
 
-    &__title, &__cost {
+    &__title,
+    &__cost {
         font-size: .85rem;
     }
     &__title {
@@ -152,10 +151,6 @@ body {
     text-align: left;
     color: hsl(228, 45%, 44%);
 }
-
-
-
-
 
 
 
@@ -195,7 +190,8 @@ body {
                 margin-right: 0.5em;
             }
         }
-        &__title, &__cost {
+        &__title,
+        &__cost {
             font-size: 1rem;
         }
     }

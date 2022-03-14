@@ -1,5 +1,7 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
 const browserSync = require("browser-sync").create();
 
 // File paths
@@ -14,12 +16,14 @@ const files = {
 
 function style() {
   // 1. where is my scss file
-  return gulp.src(files.scssPath)
+  return gulp.src(files.scssPath, { sourcemaps: true })
   // 2. pass that file through sass compiler
     .pipe(sass().on('error', sass.logError))
-  // 3. where do I save the compiled CSS?
+  // 3. PostCSS plugins
+    .pipe(postcss([ autoprefixer() ]))
+  // 4. where do I save the compiled CSS?
     .pipe(gulp.dest(files.distPath))
-  // 4. stream changes to all browser
+  // 5. stream changes to all browser
     .pipe(browserSync.stream());
 }
 
