@@ -1,5 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --bright-blue-purpleish: hsl(245, 75%, 52%, 75%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("images/pattern-background-mobile.svg") no-repeat;
+  background-size: 100%;
+  background-color: var(--pale-blue);
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  width: 330px;
+  background-color: #fff;
+  border-radius: 20px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 55px 50px -15px rgba(31, 47, 86, 0.14);
+  overflow: hidden;
+  text-align: center;
+}
+.card__body {
+  padding: 1.5em 1.5em 2em;
+}
+.card__image {
+  width: 100%;
+}
+.card__title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin-bottom: 0.8em;
+}
+.card__description {
+  font-size: 0.99em;
+  color: var(--desaturated-blue);
+  line-height: 1.5rem;
+  padding: 0 0.5em;
+}
+.card__payment {
+  display: block;
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 20px 20px 0px rgba(56, 41, 224, 0.2);
+  background-color: var(--bright-blue);
+  border-radius: 10px;
+  border: 0;
+  padding: 1em;
+  margin-bottom: 1.5em;
+}
+.card__payment:hover, .card__payment:focus {
+  background-color: var(--bright-blue-purpleish);
+}
+.card__cancel {
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+.card__cancel:hover, .card__cancel:focus {
+  color: var(--dark-blue);
+}
+
+.subscription-card {
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 2em 0;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.subscription-card__icon {
+  flex: 1;
+  margin-right: 1em;
+}
+.subscription-card__body {
+  flex: 2;
+}
+.subscription-card__action {
+  flex: 2;
+  text-align: right;
+}
+.subscription-card__action a {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--bright-blue);
+}
+.subscription-card__action a:hover, .subscription-card__action a:focus {
+  color: var(--bright-blue-purpleish);
+  text-decoration: none;
+}
+.subscription-card__title, .subscription-card__cost {
+  font-size: 0.85rem;
+}
+.subscription-card__title {
+  font-weight: 900;
+  margin-bottom: 0.2em;
+}
+.subscription-card__cost {
+  color: var(--desaturated-blue);
+}
+
+.attribution {
+  position: absolute;
+  background: white;
+  width: 200px;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  border-top-left-radius: 5px;
+  font-size: 0.7rem;
+  text-align: left;
+  color: #3e52a3;
+}
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+
+  .card {
+    width: 450px;
+  }
+  .card__body {
+    padding: 2.5em 3em 3.5em;
+  }
+  .card__title {
+    font-size: 1.75rem;
+    margin-bottom: 0.6em;
+  }
+  .card__description {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0 1.5em;
+  }
+  .card__payment {
+    margin-bottom: 2em;
+  }
+
+  .subscription-card {
+    padding: 1.5em;
+    margin: 1.5em 0 2.5em;
+  }
+  .subscription-card__action {
+    flex: 3;
+    font-size: 0.9rem;
+  }
+  .subscription-card__action a {
+    margin-right: 0.5em;
+  }
+  .subscription-card__title, .subscription-card__cost {
+    font-size: 1rem;
+  }
 }
