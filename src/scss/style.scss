@@ -50,6 +50,7 @@ body {
     }
     &__title {
         font-size: 1.35rem;
+        // font-size: clamp(1.35rem, 2vw, 1.75rem);
         font-weight: 900;
         margin-bottom: 0.8em;
     }
@@ -154,7 +155,7 @@ body {
 
 
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
     body {
         background-image: url("images/pattern-background-desktop.svg");
     }

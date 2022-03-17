@@ -152,7 +152,7 @@ body {
   color: #3e52a3;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   body {
     background-image: url("images/pattern-background-desktop.svg");
   }
