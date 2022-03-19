@@ -1,16 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
+// bright blue hsl value repeated multiple times,
+// created function to reduce value duplication
+@function brightBlue($opacity: null) {
+    $h: 245;
+    $s: 75%;
+    $l: 52%;
+    @if ($opacity) {
+        @return hsl($h, $s, $l, $opacity);
+    }
+    @return hsl($h, $s, $l);
+}
+
+
 :root {
     // Primary
     --pale-blue: hsl(225, 100%, 94%);
-    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue: #{brightBlue()};
     // Neutral
     --very-pale-blue: hsl(225, 100%, 98%);
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
 
-    --bright-blue-purpleish: hsl(245, 75%, 52%, .75);
-    --bright-blue-purpleish-blur: hsl(245, 75%, 52%, .2);
+    --bright-blue-purpleish: #{brightBlue(.75)};
+    --bright-blue-purpleish-blur: #{brightBlue(.2)};
 }
 
 * {
@@ -44,7 +57,7 @@ body {
     text-align: center;
 
     &__body {
-        padding: 1.5em 1.5em 2em;
+        padding: 1.5em 1.5em 1.9em;
     }
     &__image {
         width: 100%;
@@ -76,7 +89,7 @@ body {
 
         border-radius: 10px;
         border: 0;
-        padding: 1em;
+        padding: 1em 1em 1.2em;
         margin-bottom: 1.5em;
 
         &:hover,
@@ -166,7 +179,7 @@ body {
         width: 450px;
 
         &__body {
-            padding: 2.5em 3em 3.5em;
+            padding: 2.5em 3em 3.1em;
         }
         &__title {
             font-size: 1.75rem;

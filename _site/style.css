@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 :root {
   --pale-blue: hsl(225, 100%, 94%);
-  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue: #3829e0;
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
-  --bright-blue-purpleish: hsl(245, 75%, 52%, .75);
-  --bright-blue-purpleish-blur: hsl(245, 75%, 52%, .2);
+  --bright-blue-purpleish: rgba(56, 41, 224, 0.75);
+  --bright-blue-purpleish-blur: rgba(56, 41, 224, 0.2);
 }
 
 * {
@@ -45,7 +45,7 @@ body {
   text-align: center;
 }
 .card__body {
-  padding: 1.5em 1.5em 2em;
+  padding: 1.5em 1.5em 1.9em;
 }
 .card__image {
   width: 100%;
@@ -74,7 +74,7 @@ body {
   background-color: var(--bright-blue);
   border-radius: 10px;
   border: 0;
-  padding: 1em;
+  padding: 1em 1em 1.2em;
   margin-bottom: 1.5em;
 }
 .card__payment:hover, .card__payment:focus {
@@ -162,7 +162,7 @@ body {
     width: 450px;
   }
   .card__body {
-    padding: 2.5em 3em 3.5em;
+    padding: 2.5em 3em 3.1em;
   }
   .card__title {
     font-size: 1.75rem;
